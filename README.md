@@ -75,3 +75,13 @@ sudo k3s kubectl get nodes
 # /var/lib/rancher/k3s/server/node-token on your server
 sudo k3s agent --server https://myserver:6443 --token ${NODE_TOKEN}
 ```
+
+Build
+---------------
+```
+DQLITE=false make
+
+# or
+
+DQLITE=false SKIP_VALIDATE=true make
+```

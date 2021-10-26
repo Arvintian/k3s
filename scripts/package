@@ -9,4 +9,4 @@ fi
 
 ./package-cli
 ./package-image
-./package-airgap
+# ./package-airgap
