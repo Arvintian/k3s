@@ -102,7 +102,7 @@ func createParentOpt(stateDir string) (*parent.Opt, error) {
 	if _, err := exec.LookPath(binary); err != nil {
 		return nil, err
 	}
-	opt.NetworkDriver = slirp4netns.NewParentDriver(binary, mtu, ipnet, disableHostLoopback, "")
+	opt.NetworkDriver = slirp4netns.NewParentDriver(binary, mtu, ipnet, disableHostLoopback, "", false, false)
 	opt.PortDriver, err = portbuiltin.NewParentDriver(&logrusDebugWriter{}, stateDir)
 	if err != nil {
 		return nil, err
