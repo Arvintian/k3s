@@ -18,6 +18,9 @@ deps:
 release:
 	./scripts/release.sh
 
+clean:
+	./scripts/clean.sh
+
 .DEFAULT_GOAL := ci
 
 .PHONY: $(TARGETS)
